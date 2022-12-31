@@ -1,0 +1,30 @@
+<p>rooms works!</p>
+<div *ngIf="RoomList.availableRoom > 0">
+  Number of rooms
+  {{ RoomList.TotalRoom }}
+
+  <table [cellSpacing]="5">
+    <thead>
+      <tr>
+        <th></th>
+        <th>ID</th>
+        <th>Room Type</th>
+        <th>Facilities</th>
+        <th>Price</th>
+        <th>Booked</th>
+        <th>Gallery</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let room of rooms; let e = even; let o = odd;let i = index">
+        <td>{{i}}</td>
+        <td>{{room.roomId}}</td>
+        <td>{{room.roomType}}</td>
+        <td>{{room.amenties}}</td>
+        <td>{{room.price}}</td>
+        <td>{{room.booked}}</td>
+        <td>{{room.photos}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
